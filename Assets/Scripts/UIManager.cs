@@ -15,8 +15,11 @@ public struct UIManagerParameters
 [Serializable()]
 public struct UIElements
 {
-   [SerializeField] RectTransform imageContentArea; //for being used when playing the album cover guessing game
+   [SerializeField] RectTransform imageContentArea; //for use when playing the album cover guessing game
    public RectTransform ImageContentArea { get { return imageContentArea; } }
+
+   [SerializeField] RectTransform answersContentArea; //hopefully I'll be able to get all 4 buttons to change through this code, otherwise I'll have to run it 4 different times
+   public RectTransform AnswersContentArea { get { return answersContentArea; } }
 
    [SerializeField] TextMeshProUGUI scoreText; //will be used to update the score
    public TextMeshProUGUI ScoreText { get { return scoreText; } }
@@ -71,17 +74,22 @@ public class UIManager : MonoBehaviour
 
    void UpdateQuestionUI(Question question)
    {
-      uIElements.
+      CreateAnswers(question);
    }
 
    void CreateAnswers(Question question) {
       EraseAnswers();
 
       float offset = 0 - parameters.Margins;
-      for (int i = 0; i < question.Answers.Length; i++)
+      //I think maybe I should just delete this confusing shit and try to find a way to do this myself
+      /*for (int i = 0; i < question.Answers.Length; i++)
       {
-         AnswerData newAnswer = (AnswerData)Instantiate(answerPrefab, uIElements.); //this doesn't really work for the setup I have
+         AnswerData newAnswer = (AnswerData)Instantiate(answerPrefab, uIElements.AnswersContentArea); //want to rewrite this later, also I have no idea what it actually does
+         newAnswer.UpdateData(question.Answers[i].Info, i);
+
+         newAnswer.Rect.anchoredPosition = new Vector2(0, offset)
       }
+      */
    }
 
    void EraseAnswers() {

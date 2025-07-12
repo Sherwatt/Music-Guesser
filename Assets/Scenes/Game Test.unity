@@ -2801,6 +2801,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f5f22854c6ae547842acd1b01c0d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  events: {fileID: 0}
+  answerPrefab: {fileID: 0}
+  uIElements:
+    imageContentArea: {fileID: 0}
+    answersContentArea: {fileID: 0}
+    scoreText: {fileID: 0}
+    resultsBackground: {fileID: 0}
+    statusText: {fileID: 0}
+    resultScoreText: {fileID: 0}
+    highScoreText: {fileID: 0}
+    mainCanvasGroup: {fileID: 0}
+    endGameUIElements: {fileID: 0}
+  parameters:
+    margins: 0
 --- !u!114 &2063008381
 MonoBehaviour:
   m_ObjectHideFlags: 0
