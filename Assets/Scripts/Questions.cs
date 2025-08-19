@@ -19,7 +19,7 @@ public class Question : ScriptableObject
     public string Info { get { return _info; } }
 
     //[SerializeField] Image albumCover = null; //put an album cover here to be identified, we can copy this later to do audio files
-   //public Image AlbumCover { get { return albumCover; } }
+    //public Image AlbumCover { get { return albumCover; } }
 
     [SerializeField] Answer[] _answers = null; //list of all potential answers for a given question
     public Answer[] Answers { get { return _answers; } }

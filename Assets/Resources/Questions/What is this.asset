@@ -10,11 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Questions
+  m_Name: What is this
   m_EditorClassIdentifier: Assembly-CSharp::Question
-  _info: What are musicians?
+  _info: What is This?
   _answers:
-  - _info: People without real jobs
+  - _info: CD
+    _isCorrect: 0
+  - _info: Cassette Tape
+    _isCorrect: 0
+  - _info: Vinyl LP
     _isCorrect: 1
-  - _info: People who play music for a living
+  - _info: Spinny Thing
     _isCorrect: 0
